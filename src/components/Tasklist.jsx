@@ -1,5 +1,5 @@
 import React from "react";
-import Task from "./components/Task.jsx";
+import Task from "./Task.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { updateTaskState } from "../lib/store";
 
@@ -27,7 +27,7 @@ export default function TaskList() {
   const archiveTask = (value) => {
     // We're dispatching the Archive event back to our store
     dispatch(updateTaskState({ id: value, newTaskState: "TASK_ARCHIVED" }));
-  }};
+  };
   const LoadingRow = (
     <div className="loading-item">
       <span className="glow-checkbox" />
@@ -36,7 +36,6 @@ export default function TaskList() {
       </span>
     </div>
   );
-
   if (status === "loading") {
     return (
       <div className="list-items" data-testid="loading" key={"loading"}>
@@ -60,7 +59,6 @@ export default function TaskList() {
       </div>
     );
   }
-
   return (
     <div className="list-items" data-testid="success" key={"success"}>
       {tasks.map((task) => (
@@ -73,3 +71,4 @@ export default function TaskList() {
       ))}
     </div>
   );
+}

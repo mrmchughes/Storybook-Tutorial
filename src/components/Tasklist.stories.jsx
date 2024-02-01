@@ -1,4 +1,4 @@
-import TaskList from "./components/Tasklist.jsx";
+import TaskList from "./Tasklist.jsx";
 import * as TaskStories from "./Task.stories";
 
 import { Provider } from "react-redux";
